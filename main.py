@@ -26,7 +26,7 @@ def on_message_received(topic, payload, **kwargs):
     try:
         data = json.loads(payload)
         insertar_en_base_de_datos(data)
-        enviar_confirmacion(data['uid'], "de puta madre!")
+        enviar_confirmacion(data['uid'], "Uid rebut")
     except Exception as e:
         print(f"Error procesando el mensaje: {e}")
         enviar_confirmacion(data['uid'], "error", str(e))
